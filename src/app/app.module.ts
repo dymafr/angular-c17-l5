@@ -6,17 +6,9 @@ import { RouterModule } from "@angular/router";
 import { APP_ROUTES } from "./app.routes";
 import { PanierService } from "./shared/services/panier.service";
 import { HttpClientModule } from "@angular/common/http";
-import { CocktailModule } from "./features/cocktail/cocktail.module";
-import { PanierModule } from "./features/panier/panier.module";
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    RouterModule.forRoot(APP_ROUTES),
-    HttpClientModule,
-    CocktailModule,
-    PanierModule
-  ],
+  imports: [BrowserModule, RouterModule.forRoot(APP_ROUTES), HttpClientModule],
   declarations: [AppComponent, HeaderComponent],
   bootstrap: [AppComponent],
   providers: [PanierService]
